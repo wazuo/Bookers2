@@ -10,33 +10,40 @@
   </head>
 
   <body>
-    <% if user_signed_in? %>
-    <li>
-      <%= link_to "Home",books_path%>
-    </li>
-    <li>
-      <%= link_to "Users",books_path%>
-    </li>
-    <li>
-      <%= link_to 'Books',books_path%>
-      </li>
-    <li>
-      <%= link_to "logout",destroy_user_session_path, method: :delete %>
-    </li>
-    <% else %>
-    <li>
-      <%= link_to "Home", root_path %>
-    </li>
-    <li>
-      <%= link_to "About", about_path %>
-    </li>
-    <li>
-      <%= link_to "sign up", new_user_registration_path%>
-    </li>
-    <li>
-      <%= link_to "login", new_user_session_path %>
-    </li>
-    <% end %>
+    <nav class="navbar navbar-expand-lg　navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <span>Bookers</span>
+        </a>
+        <% if user_signed_in? %>
+        <li>
+          <%= link_to "Home",books_path%>
+        </li>
+        <li>
+          <%= link_to "Users",books_path%>
+        </li>
+        <li>
+          <%= link_to 'Books',books_path%>
+          </li>
+        <li>
+          <%= link_to "logout",destroy_user_session_path, method: :delete %>
+        </li>
+        <% else %>
+        <li>
+          <%= link_to "Home", root_path %>
+        </li>
+        <li>
+          <%= link_to "About", about_path %>
+        </li>
+        <li>
+          <%= link_to "sign up", new_user_registration_path%>
+        </li>
+        <li>
+          <%= link_to "login", new_user_session_path %>
+        </li>
+        <% end %>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
