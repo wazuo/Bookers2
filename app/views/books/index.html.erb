@@ -20,7 +20,6 @@
   <tbody>
     <tr>
     <% @books.each do |book| %>
-    <td></td>
     <td>
       <%= link_to book_path(book.id) do %>
       <%= book.title%>
