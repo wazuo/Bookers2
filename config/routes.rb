@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'homes#top'
   resources :books, only: [:index, :edit, :create, :show, :update, :destroy]
-  resources :users, only: [:show, :edit, :update]
+  resources :users, only: [:show, :edit, :update, :index, :create]
 end
