@@ -5,7 +5,7 @@
       <h2>User info</h2>
       <table class="table">
         <tbody>
-          <tr><%= attachment_image_tag @user, :profile_image, :fill,100,100, format: 'jpeg',fallback: "no_image.jpg",size: "60x60" %></tr>
+          <tr><%= attachment_image_tag @user, :profile_image, :fill,100,100, format: 'jpeg',fallback: "no_image.jpg",size: "100x100" %></tr>
           <tr>
             <th>名前</th>
             <th><%= @user.name%></th>
